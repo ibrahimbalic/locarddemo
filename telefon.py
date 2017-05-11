@@ -34,14 +34,14 @@ Ulke 	= enum(TR=90,UK=44,DE=49,PL=48)
 
 def numaraUret(Ulke,OP, SonRakam):
 	Uretim 		= itertools.product(xrange(10), repeat=5)
-	MaxUretilen = len(list(itertools.product(xrange(10), repeat=5)))
+	#MaxUretilen = len(list(itertools.product(xrange(10), repeat=5)))
 	Art 		= 0
 	Sayfa		= 1
-	Total		= 0
+	#Total		= 0
 	Top 		= ""
 	for Combination in Uretim:
 		Art = Art + 1
-		Total = Total  + 1
+		#Total = Total  + 1
 		Top = Top + str(",,,,,,,,,,,,,,,,,,,,,,,,,,* My Contacts,* Home,,Mobile,+")+ str(Ulke) + str(OP) + ''.join(map(str, Combination)) + str(SonRakam) + "\n"
 		if Art == 5000:
 			kaydet("rehber-"+str(SonRakam)+"_"+str(Sayfa)+".csv", Top)
